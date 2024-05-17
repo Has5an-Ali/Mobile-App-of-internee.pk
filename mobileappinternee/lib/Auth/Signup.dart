@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mobileappinternee/Auth/LoginScreen.dart';
+import 'package:mobileappinternee/Home/Home.dart';
 import 'package:mobileappinternee/const/CustomTextFields.dart';
 import 'package:mobileappinternee/const/OurButton.dart';
+import 'package:mobileappinternee/const/commonbackground.dart';
 import 'package:mobileappinternee/const/const.dart';
+import 'package:get/get.dart';
 import 'package:mobileappinternee/const/fontstyle.dart';
 
 class signupScreen extends StatelessWidget {
@@ -11,17 +15,9 @@ class signupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Register",
-          style: TextStyle(
-            color: textcolor,
-            fontFamily: bold,
-          ),
-        ),
-        backgroundColor: Colors.green,
         centerTitle: true,
       ),
-      backgroundColor: textcolor,
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           (context.screenHeight * 0.01).heightBox,
@@ -61,7 +57,9 @@ class signupScreen extends StatelessWidget {
                     title: "Signup",
                     Textcolor: maincolor,
                     color: textcolor,
-                    onPress: () {}),
+                    onPress: () {
+                      Get.to(() => Home());
+                    }),
               ),
               10.heightBox,
               login.text.fontFamily(semibold).color(textcolor).make(),
@@ -73,7 +71,9 @@ class signupScreen extends StatelessWidget {
                     title: "Login",
                     Textcolor: maincolor,
                     color: textcolor,
-                    onPress: () {}),
+                    onPress: () {
+                      Get.to(() => LoginScreen());
+                    }),
               ),
             ],
           )

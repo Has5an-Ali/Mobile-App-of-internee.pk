@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mobileappinternee/SplashScreen/SplashScreen.dart';
 import 'package:get/get.dart';
 
+import 'const/fontstyle.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,8 +15,11 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        scaffoldBackgroundColor: Colors.transparent,
+        appBarTheme: const AppBarTheme(
+            iconTheme: IconThemeData(color: Colors.black),
+            backgroundColor: Colors.transparent),
+        fontFamily: regular,
       ),
       home: const SplashScreen(),
     );
